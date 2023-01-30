@@ -9,14 +9,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <style>
+  body {
+    background: #ad7f7b;
+  }
+
   .box {
-    width: 50vw;
-    height: 100vh;
-    margin: auto;
-    border: 1px solid #ccc;
+    width: 300px;
+    height: 500px;
+    margin: 40px auto;
+    border: 1px solid transparent;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    border-radius: 50px;
+    background: #ad7f7b;
+    box-shadow: 20px 20px 60px #936c69,
+      -20px -20px 60px #c7928d;
   }
 
   .box button {
@@ -30,7 +38,6 @@
 </style>
 
 <body>
-  <button></button>
   <div class="box animate__animated animate__zoomInUp">
     <button class="animate__animated animate__bounce animate__repeat-2">关注我</button>
     <div class="card animate__animated  animate__bounceInRight">
