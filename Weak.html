@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            hello world
+        </h1>
+    </div>
+    <button id="btn">
+        点击删除 h1
+    </button>
+    <script>
+        const s = new Set()
+        const ws = new WeakSet()
+        s.add(document.getElementsByTagName('h1')[0])
+        ws.add(document.getElementsByTagName('h1')[0])
+        btn.onclick = function () {
+            let div = document.querySelector('div')
+            div.innerHTML = ''
+              setTimeout(() => {  
+                console.log(ws);
+                console.log(s.size);
+            }, 2000)
+        }
+    </script>
+</body>
+
+</html>

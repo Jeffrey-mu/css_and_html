@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      display: inline-block;
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px
+    }
+
+    .vip-price {
+      display: inline-block;
+      margin-left: 26px;
+      position: relative;
+    }
+
+    .vip-price::before {
+      content: '';
+      width: 1px;
+      height: 23px;
+      background: #BCBCBC;
+      position: absolute;
+      left: -13px;
+      top: 5px;
+      z-index: 8;
+    }
+
+    .vip-price__inner {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding-right: 2px;
+      background: #F3EDE3;
+      border: 0.9px solid #DEA44D;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .vip-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vip-logo::before {
+      content: 'VIP';
+      position: relative;
+      display: flex;
+      align-items: center;
+      z-index: 8;
+      color: #FFFFFF;
+      font-size: 18px;
+      margin-left: 10px
+    }
+
+    .vip-logo::after {
+      background: linear-gradient(36deg, #E0A74E 0%, #C37412 100%);
+      border-radius: 18px 0px 0px 18px;
+      height: 100%;
+      width: 50px;
+      height: 60px;
+      transform: rotate(30deg);
+      content: '';
+      display: block;
+      position: relative;
+      top: -8px;
+      left: -45px;
+      z-index: 7;
+    }
+
+    button {
+      border-radius: 22px;
+      color: #E6B365;
+      background: linear-gradient(0deg, #000000 0%, #848484 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btns">
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="vip-price__inner">
+        <span class="vip-logo"></span>
+        <span class="amount font-weight">￥8.99</span>
+        <button>
+          申请VIP
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

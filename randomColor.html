@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机切换背景颜色</title>
+</head>
+<style>
+</style>
+<div class="box">
+    <style>
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+        }
+    </style>
+    <button style="margin: auto;">点击切换颜色</button>
+</div>
+<body>
+    <script>
+        let btn = document.querySelector('button')
+        btn.onclick = randomColor.bind(null, [document.querySelector('.box')])
+        function randomColor(el) {
+            el[0].style.background = `rgb(${randomAndCeil()},${randomAndCeil()},${randomAndCeil()})`
+        }
+        function randomAndCeil(value = 255) {
+            return Math.ceil(Math.random()*value)
+        }
+    </script>
+</body>
+</html>

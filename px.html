@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .box {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box div {
+    width: 10px;
+    height: 10px;
+  }
+
+  .box div:nth-child(odd) {
+    background: red;
+  }
+
+  .box div:nth-child(even) {
+    background-color: aqua;
+  }
+</style>
+
+<body>
+  <div class="box"></div>
+  <script>
+    let box = document.querySelector('.box');
+    for (let i = 0; i < 3000; i++) {
+      let div = document.createElement('div');
+      box.appendChild(div)
+    }
+    box.onclick = function (e) {
+      console.log('page')
+      console.log(e.pageX);
+      console.log(e.pageY);
+      console.log('page')
+      console.log('offset')
+      console.log(box.offsetTop);
+      console.log(box.offsetLeft);
+      console.log('offset')
+      console.log(box.offsetWidth);
+      console.log(box.offsetHeight);
+      console.log('getComputedStyle')
+      console.log(window.getComputedStyle(box).width)
+      console.log(window.getComputedStyle(box).height)
+    }
+  </script>
+</body>
+
+</html>

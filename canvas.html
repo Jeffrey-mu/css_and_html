@@ -1,0 +1,27 @@
+<html>
+    
+    <head>
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <style type="text/css">
+    
+        </style>
+        <script type="text/javascript">
+         function draw(){
+             var canvas =document.getElementById('myCanvas');
+             if(canvas.getContext){
+                 var ctx=canvas.getContext('2d');/*创建2d Context对象*/
+                 
+                 ctx.fillStyle="#FF0000";/*颜色*/
+                 ctx.fillRect(0,0,150,75);/* x,y,width,height*/
+                 
+                 ctx.fillStyle="rgba(0,0,200,0.5)";
+                 ctx.fillRect(50,30,150,75); 
+             }
+         } 
+         </script>
+    </head>
+    <body onload="draw();">
+        <canvas id="myCanvas" ></canvas>
+    </body>
+   
+</html>
