@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  @import "https://unpkg.com/open-props";
+  @import "https://unpkg.com/open-props/normalize.min.css";
+
+
+  /* demo purpose only */
+  .primary {
+    background: var(--indigo-8);
+    color: white;
+  }
+
+  button {
+    background: white;
+    color: var(--indigo-8);
+    font-size: var(--font-size-3);
+    padding-inline: var(--size-8);
+    padding-block: var(--size-3);
+    border-radius: var(--radius-2);
+  }
+
+  .border {
+    box-shadow: var(--shadow-5);
+    width: 200px;
+    height: 220px;
+    margin: 20px auto;
+    -webkit-mask: var(--mask-edge-scoop-top);
+  }
+
+</style>
+
+<body>
+  <div class="border">
+    123
+  </div>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <button class="primary">测试</button>
+  <input type="text">
+  <a href="">123</a>
+  <ul>
+    <li>
+      123
+    </li>
+  </ul>
+</body>
+
+</html>

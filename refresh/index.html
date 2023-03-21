@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/commone.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <title>Document</title>
+    <style>
+        .box {
+            /* 容器原始位置向上移动60px,隐藏掉loading盒子,下拉时才显示出来 */
+            position: relative;
+            top: -100px;
+        }
+
+        .box .loading {
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- @click="showAd(0)" v-if="adSh == 0" -->
+    <div class="cilcel only">
+        <image src="../../static/image/bot.png" class="sportImg"></image>
+    </div>
+
+
+
+    <div class="box">
+        <section class="loading">
+            <span class="spans">下拉刷新</span>
+        </section>
+        <div class="goTop">
+            <image src="../../static/image/gotop.png"></image>
+        </div>
+
+        <div class="header flex">
+            <div>
+                <img src="../../static/image/logos.png" />
+            </div>
+            <div class="title weight">demo</div>
+            <div class="shareIcon">
+                <img src="../../static/image/share.png" />
+            </div>
+        </div>
+
+        <div class="serch">
+            <a href="search.html">
+                <image src="../../static/image/serch.png"></image>
+                <input placeholder="please input content" />
+            </a>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="type.html">
+                        <img src="./static/image/veer-141825299.jpg">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="type.html">
+                        <img src="./static/image/veer-141825299.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=".html">
+                        <img src="./static/image/veer-141825299.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div> -->
+
+        <div class="nav flex">
+            <div class="navItem">
+                <img src="./static/image/logo.png" />
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+            <div class="navItem">
+                <image src="../../static/image/logo.png"></image>
+                <div>Sport</div>
+            </div>
+        </div>
+
+        <div class="flex fourGame">
+            <a href="#">
+                <image src="../../static/image/veer-141825299.jpg"></image>
+            </a>
+            <a href="#">
+                <image src="../../static/image/veer-141825299.jpg"></image>
+            </a>
+            <a href="#">
+                <image src="../../static/image/veer-141825299.jpg"></image>
+            </a>
+            <a href="#">
+                <image src="../../static/image/veer-141825299.jpg"></image>
+            </a>
+        </div>
+
+        <div class="hotGame">
+            <div class="flex litHeader">
+                <div class="weight one">Hot Game</div>
+                <div class="two">More ></div>
+            </div>
+            <div class="hots flex">
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popular">
+            <div class="flex">
+                <div></div>
+                <div style="font-size: 14px;margin-top: 20px;">More ></div>
+            </div>
+            <div class="hots flex">
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+            </div>
+        </div>
+
+        <div class="twoGame flex">
+            <div class="twoGameL">
+                <a href="#">
+                    <image src="../../static/image/veer-141825299.jpg"></image>
+                </a>
+            </div>
+            <div class="twoGameL">
+                <a href="#">
+                    <image src="../../static/image/veer-141825299.jpg"></image>
+                </a>
+            </div>
+        </div>
+
+        <div class="hotGame">
+            <div class="flex litHeader">
+                <div class="weight one">New Game</div>
+                <div class="two">More ></div>
+            </div>
+            <div class="hots flex">
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+                <div class="hotItem">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>Sport</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100%;padding: 10px;box-sizing: border-box;">
+            <div class="content-scroll">
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+                <div class="scroll">
+                    <image src="../../static/image/logo.png"></image>
+                </div>
+            </div>
+        </div>
+
+        <div class="Best hotGame">
+            <div class="flex litHeader">
+                <div class="weight one">New Game</div>
+                <a class="two" href="more.html">More ></a>
+            </div>
+
+            <div class="bestGame flex" v-for="(item,index) in 5" :key="index">
+                <div class="flex1">
+                    <image src="../../static/image/logo.png"></image>
+                    <div>
+                        <div class="title">Title</div>
+                        <div class="flex">
+                            <div class="score weight">⭐3.9</div>
+                            <div class="content">Content</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">Deatils</div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div style="margin-bottom: 20upx;">FAQ | User Agreement | Privacy Policy | Contact Us</div>
+            <div>@2022 FunnyStore All Rights Reserved</div>
+        </div>
+
+        <div class="share" style="display: none;">
+            <div></div>
+            <div class="whiteBox" style="width: 100%;padding: 10px;box-sizing: border-box;">
+                <div class="content-scrolls">
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/one.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">FaceBook</div>
+                        </a>
+                    </div>
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/two.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">Twitter</div>
+                        </a>
+                    </div>
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/three.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">Google +</div>
+                        </a>
+                    </div>
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/four.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">LinkedIn</div>
+                        </a>
+                    </div>
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/five.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">Pinterest</div>
+                        </a>
+                    </div>
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/six.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">Tumblr</div>
+                        </a>
+                    </div>
+                    <div class="flex box1" style="text-align: center;">
+                        <a style="margin-right: 10px;color: #666;" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffunnystore.com%2Fplay%2Fgame.html%3Fid%3D0db7c760">
+                            <img src="./static/image/seven.png" style="width: 50px;height: 50px;" />
+                            <div style="font-size: 15px;">Weibo</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="cancel">cancel</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        autoplay: true,
+        delay: 2000,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+<script type="text/javascript">
+
+    $('.shareIcon').click(function (e) {
+        $('.share').show()
+        var preMove = function (e) { passive: false; };
+        console.log(preMove, 'ppp')
+        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.addEventListener("touchmove", preMove, false);//禁止页面滑动
+    })
+    $('.cancel').click(function () {
+        $('.share').hide()
+        $("html,body").css("overflow", "").css("height", "");
+        document.body.removeEventListener('touchmove', detail.welcomeShowedListener, false);
+    })
+
+
+    // 滚动容器
+    const container = document.querySelector('.box');
+    // loading文字容器
+    const span = container.querySelector('span');
+    let startPosition = 0;// 下拉的开始位置
+    let distance = 0;// 下拉距离的差值
+    // 手指按下时
+    container.addEventListener('touchstart', function (e) {
+        // 在回弹后的下一次下拉按下时重置loading文本
+        span.textContent = '下拉刷新';
+        // 记录开始位置
+        startPosition = e.touches[0].pageY;
+    })
+    // 手指移动时
+    container.addEventListener('touchmove', function (e) {
+        // 计算下拉差值
+        const currentPosition = e.touches[0].pageY;
+        // 计算下拉后离开始位置的差值
+        distance = currentPosition - startPosition;
+        // 如果下拉差值达到,则提示可以松手了 这个达到的具体值这里是取的下拉出来的区域高度
+        if (distance > 100) {// 案例以100为临界值,超过了100的距离就提示释放刷新
+            span.textContent = '释放刷新';
+        }
+        // 限制下滑的最大值为120,超过就不再下滑
+        if (distance < 120) {
+            // 容器的这个下滑是瞬时的 取消过渡效果
+            this.style.transition = 'transform 0s';
+            this.style.transform = `translateY(${distance}px)`
+        }
+    })
+    // 手指松开时
+    container.addEventListener('touchend', function (e) {
+        // 回弹的动作可以给个1s的过渡效果
+        this.style.transition = 'transform 1s';
+        // 如果下拉差值并没有达到 则直接回弹
+        if (distance > 0 && distance < 100) {
+            this.style.transform = `translateY(0px)`
+            return;
+        }
+        if (distance > 100) {
+            // 下拉差值达到了就显示刷新中,并暂时定格在这个位置
+            this.style.transform = `translateY(100px)`;
+            span.textContent = '刷新中';
+            // 等数据回来后显示刷新成功1s然后再回弹 到这里本次整个下拉执行完毕
+            setTimeout(() => {// setTimeout模拟异步请求 真实开发这里是一个promise请求
+                span.textContent = '刷新成功';
+                location.reload()
+                // 这个setTimeout让刷新成功显示一秒后再回弹
+                setTimeout(() => {
+                    this.style.transform = `translateY(0px)`
+                }, 1000)
+            }, 2000);
+        }
+        // 一次下拉结束后重置差值
+        distance = 0;
+    })
+</script>
+
+</html>

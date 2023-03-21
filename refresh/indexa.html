@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./minirefresh.min.css">
+  <script src="./minirefresh.min.js"></script>
+</head>
+<body>
+<!-- minirefresh开头的class请勿修改 -->
+<div id="minirefresh" class="minirefresh-wrap">
+
+</div>
+<script>
+  // 引入任何一个主题后，都会有一个 MiniRefresh 全局变量
+    var miniRefresh = new MiniRefresh({
+      container: '#minirefresh',
+      down: {
+        callback: function () {
+          // 下拉事件
+
+          miniRefresh.endDownLoading();
+        }
+      },
+      up: {
+
+        callback: function () {
+          // 上拉事件
+
+          // 注意，由于默认情况是开启满屏自动加载的，所以请求失败时，请务必endUpLoading(true)，防止无限请求
+          miniRefresh.endUpLoading(true);
+        }
+      }
+    });
+</script>
+</body>
+</html>

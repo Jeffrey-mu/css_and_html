@@ -1,0 +1,24 @@
+{
+  "name": "css_and_html",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeffrey-mu/css_and_html.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeffrey-mu/css_and_html/issues"
+  },
+  "homepage": "https://github.com/Jeffrey-mu/css_and_html#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}

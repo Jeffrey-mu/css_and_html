@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>进度条</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .progress-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 600px;
+      height: 60px;
+      margin-bottom: 40px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #cdeee3;
+    }
+
+    .progress {
+      width: 0%;
+      height: 100%;
+      transition: all 200ms;
+      background-color: #3da985;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bolder;
+      line-height: 60px;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      transition: all 200ms;
+      background-image: linear-gradient(to right, #cdeee3 0, #cdeee3 0%, #3da985 0%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="progress-wrapper">
+    <div class="progress"></div>
+    <p>正在安装 0%</p>
+  </div>
+  <button>点击下载</button>
+</body>
+<script>
+  $("button").on("click", () => {
+    let num = 0;
+    const timer = setInterval(() => {
+      if (num > 100) {
+        clearInterval(timer);
+        num = 100;
+      }
+      $(".progress").css("width", `${num}%`);
+      $("p")
+        .text(`正在安装 ${num}%`)
+        .css("background-image", `linear-gradient(to right, #cdeee3 0, #cdeee3 ${num}%, #3da985 ${num}%)`);
+      num += Math.floor(Math.random() * 5);
+    }, 300);
+  });
+</script>
+
+</html>
