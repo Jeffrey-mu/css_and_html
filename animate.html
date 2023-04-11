@@ -1,54 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>animate.css</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>移动端首页</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1E90FF;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      height: 180px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      background-color: #F5F5F5;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: -50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav a {
+      display: block;
+      width: calc(33.33% - 20px);
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 10px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease-in-out;
+    }
+
+    nav p {
+      font-size: 18px;
+      margin: 0;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover img {
+      filter: none;
+    }
+
+    nav a:hover p {
+      color: #1E90FF;
+    }
+
+  </style>
 </head>
-<style>
-  body {
-    background: #ad7f7b;
-  }
-
-  .box {
-    width: 300px;
-    height: 500px;
-    margin: 40px auto;
-    border: 1px solid transparent;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 50px;
-    background: #ad7f7b;
-    box-shadow: 20px 20px 60px #936c69,
-      -20px -20px 60px #c7928d;
-  }
-
-  .box button {
-    float: right;
-  }
-
-  .box .card img {
-    width: 100%;
-  }
-
-</style>
 
 <body>
-  <div class="box animate__animated animate__fadeIn">
-    <button class="animate__animated animate__bounce animate__repeat-2">关注我</button>
-    <div class="card animate__animated  animate__bounceInRight">
-      <h2>我是美女</h2>
-      <img src="./img1.jpeg" alt="">
-    </div>
-    <div class="card animate__animated  animate__bounceIn">
-      <h2>我是美女</h2>
-      <img src="./img1.jpeg" alt="">
-    </div>
-  </div>
+  <header>
+    <h1>欢迎来到移动端首页</h1>
+    <div class="header-overlay"></div>
+  </header>
+  <nav>
+    <a href="#">
+      <img src="https://via.placeholder.com/150x150.png?text=Icon" alt="菜单图标">
+      <p>菜单标题</p>
+    </a>
+    <a href="#">
+      <img src="https://via.placeholder.com/150x150.png?text=Icon" alt="菜单图标">
+      <p>菜单标题</p>
+    </a>
+    <a href="#">
+      <img src="https://via.placeholder.com/150x150.png?text=Icon" alt="菜单图标">
+      <p>菜单标题</p>
+    </a>
+    <a href="#">
+      <img src="https://via.placeholder.com/150x150.png?text=Icon" alt="菜单图标">
+      <p>菜单标题</p>
+    </a>
+    <a href="#">
+      <img src="https://via.placeholder.com/150x150.png?text=Icon" alt="菜单图标">
+      <p>菜单标题</p>
+    </a>
+    <a href="#">
+      <img src="https://via.placeholder.com/150x150.png?text=Icon" alt="菜单图标">
+      <p>菜单标题</p>
+  </a>
+  </nav>
 </body>
 
 </html>

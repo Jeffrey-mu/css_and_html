@@ -2,27 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jquery页面内容查找</title>
+    <style>
+        .disshow {
+            display: none;
+        }
+
+        .highlight {
+            color: #fb4232;
+            background-color: #ff0;
+            border: 1px solid transparent;
+        }
+
+        .highlight.select {
+            background-color: #ddd;
+            border: 1px solid #999;
+        }
+
+        .search {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .searchTip {
+            padding: 5px 10px;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background: #333;
+            box-shadow: 4px 5px 7px 1px #999;
+            color: #fff;
+            opacity: 0.9;
+        }
+    </style>
 </head>
-<style>
-    body{
-      font-size: 10px;    
-    }
-    div{
-      font-size: 15px;   
-      /* font-size: 2em; */
-    }
-    p{
-      font-size: 2rem;
-    }
-  </style>
-  <body>
-    BODY
-    <div>
-    DIV
-      <p>我是最可爱的em单位~</p>
-    </div>
-  </body>
+<body>
+<div class="search">
+    <input id="key-word" class="key-word" value="请输入搜索内容"/>
+    <button id="search-button">搜索</button>
+    <p class="searchTip disshow"></p>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+
+<script>
+    (function ($) {
+
+        $.fn.fixDiv = function (options) {
+            var defaultVal = {
+                top: 20
+            }
+            var obj = $.extend(defaultVal, options)
+            $this = this;
+            var _top = $this.offset().top;
+            var _left = $this.offset().left;
+            $(window).scroll(function () {
+                var _scrollTop = $(document).scrollTop();
+                if (_scrollTop > _top) {
+                    $this.offset({
+                        top: _scrollTop + obj.top,
+                        left: _left
+                    });
+                } else {
+                    $this.offset({
+                        top: _top,
+                        left: _left
+                    });
+                }
+            });
+            return this;
+        }
+    }(jQuery))
+
+    $(function () {
+//        调用fixDiv方法
+        $('.search').fixDiv({top: 10});
+        $('#search-button').click(hightLight);
+//        回车进行搜索
+        $('.key-word').keydown(function (e) {
+            var key = e.which;
+            if (key == 13) hightLight();
+        })
+
+        var index = 0;
+        var historyText;
+
+        function hightLight() {
+            clearSelection();
+            var flag = 0;
+
+            var inpText = $('#key-word').val();
+            var regExp = new RegExp(inpText, 'g');
+            var content = $('#content').text();
+            if ($.trim(inpText) == '') {
+                showTips('请输入查找内容');
+                return;
+            }
+            if (!regExp.test(content)) {
+                showTips('未找到匹配项');
+                return;
+            } else {
+                if (historyText != inpText) {
+                    index = 0;
+                    historyText = inpText;
+                }
+            }
+            $('#content p').each(function () {
+                var html = $(this).html();
+                var newhtml = html.replace(regExp, '<span class="highlight">' + inpText + '</span>');
+                $(this).html(newhtml);
+                flag = 1;
+            })
+            if (flag == 1) {
+                var _top = $(".highlight").eq(index).offset().top;
+                $(".highlight").eq(index).addClass('select').siblings('.highlight').removeClass('select');
+                $("#search-button").html("查找下一个");
+                $("html, body").animate({scrollTop: _top-50});
+                index++;
+                if (index > $(".highlight").size() - 1) {
+                    index = 0;
+                }
+            }
+        }
+//    清除选择
+        function clearSelection() {
+            $('#content p').each(function () {
+                $(this).find('.highlight').each(function () {
+                    $(this).replaceWith($(this).html());
+                })
+            })
+        }
+//    显示提示信息
+        function showTips(text) {
+            $('.search .searchTip').text(text);
+            $('.search .searchTip').removeClass('disshow').show();
+            setTimeout(function () {
+                $('.search .searchTip').fadeOut()
+            }, 2000);
+        }
+    })
+</script>
+</body>
 </html>

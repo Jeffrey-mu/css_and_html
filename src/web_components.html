@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components</title>
+</head>
+
+<body>
+  <template id="my-button">
+    <style>
+      button {
+        font-size: 16px;
+        padding: 10px;
+        background: #007bff;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+
+    </style>
+
+    <button>1</button>
+  </template>
+  <my-button></my-button>
+  <script>
+    class MyButton extends HTMLElement {
+      constructor() {
+        super();
+
+        // 获取模板内容
+        const template = document.getElementById('my-button').content;
+
+        // 创建 Shadow DOM
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+
+        // 将模板内容插入 Shadow DOM 中
+        shadowRoot.appendChild(template.cloneNode(true));
+
+        // 绑定事件处理函数
+        this.shadowRoot.querySelector('button').addEventListener('click', () => {
+          this.count++;
+          this.render();
+        });
+
+        // 初始化计数器
+        this.count = 0;
+      }
+
+      render() {
+        this.shadowRoot.querySelector('button').textContent = `Click Me (${this.count})`;
+      }
+    }
+
+    // 注册 Custom Element
+    window.customElements.define('my-button', MyButton);
+
+  </script>
+</body>
+
+</html>
