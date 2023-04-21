@@ -1,0 +1,101 @@
+.app {
+  max-width: 700px;
+  margin: 20px auto;
+}
+.app .type_column1 {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background: #eee;
+  background: linear-gradient(to left, #eee 0%, #fff 90%);
+}
+.app .type_column1_iconfont {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: rgba(157, 31, 207, 0.979);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.app .type_column1_iconfont .icon-ziwopingjia {
+  font-size: 20px;
+  color: #fff;
+}
+.app .type_column1_title {
+  background-color: red;
+  background: linear-gradient(to right, rgb(157, 31, 207) 0%, #fff 80%);
+  height: 100%;
+  width: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.app .type_column1_title_after {
+  content: "";
+  width: 15px;
+  height: 100px;
+  display: inline-block;
+  background-color: rgba(157, 31, 207, 0.599);
+  transform: rotate(25deg);
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+.app .type_column1_title_after:nth-child(2) {
+  content: "";
+  width: 15px;
+  display: inline-block;
+  background-color: rgba(157, 31, 207, 0.599);
+  transform: rotate(25deg);
+  position: absolute;
+  right: 40px;
+}
+.app .type_column2 {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background: #eee;
+  background: linear-gradient(to left, #eee 0%, #fff 90%);
+}
+.app .type_column2_iconfont {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: rgba(157, 31, 207, 0.979);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.app .type_column2_iconfont .icon-ziwopingjia {
+  font-size: 20px;
+  color: #fff;
+}
+.app .type_column2_title {
+  background-color: red;
+  background: linear-gradient(to right, rgb(157, 31, 207) 0%, #fff 80%);
+  height: 100%;
+  width: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.app .type_column2_title_after {
+  content: "";
+  width: 5px;
+  height: 100px;
+  display: inline-block;
+  background-color: rgba(157, 31, 207, 0.599);
+  transform: rotate(-25deg);
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+.app .type_column2_title_after:nth-child(2) {
+  content: "";
+  width: 5px;
+  display: inline-block;
+  background-color: rgba(157, 31, 207, 0.599);
+  position: absolute;
+  right: 30px;
+}/*# sourceMappingURL=index.css.map */
